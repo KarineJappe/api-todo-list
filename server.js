@@ -11,7 +11,8 @@ require('./routes.js')(server);
 mongoose.Promise = global.Promise;
 
 mongoose.connect('mongodb+srv://trabalhog2:trabalhog2@cluster0-aozv0.mongodb.net/trabalhog2?retryWrites=true&w=majority', {
-    useNewUrlParser: true
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
 });
 
 server.get('/', (req, res) => {
