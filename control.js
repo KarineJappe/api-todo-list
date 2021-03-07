@@ -91,7 +91,7 @@ exports.update = (req, res) => {
 // Delete 
 exports.delete = (req, res) => {
     Tarefa.findByIdAndRemove(req.params.tarefaId)
-    .then(product => {
+    .then(tarefa => {
         if(!tarefa) {
             return res.status(404).send({
                 message: "erro"
